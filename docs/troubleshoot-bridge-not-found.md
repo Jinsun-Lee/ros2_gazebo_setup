@@ -3,7 +3,6 @@
 **증상:** `Package 'ros_gz_bridge' not found` 또는 실행 파일이 없다는 오류.
 
 ## 해결법
-
 ROS 2 배포판에 맞춰 패키지를 설치한다.
 
 ```bash
@@ -18,7 +17,6 @@ sudo apt install \
 <br>
 
 ## 배포판별 Gazebo 조합
-
 | ROS 2 배포판 | 권장 Gazebo |
 |-------------|------------|
 | Humble      | Fortress   |
@@ -30,7 +28,6 @@ sudo apt install \
 <br>
 
 ## 검증
-
 ```bash
 ros2 pkg list | grep ros_gz
 ros2 run ros_gz_bridge parameter_bridge --help

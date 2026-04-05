@@ -3,7 +3,6 @@
 launch 파일의 모든 `DeclareLaunchArgument`는 기본값과 의미를 함께 문서화한다.
 
 ## 인자 선언
-
 ```python
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
@@ -32,7 +31,6 @@ def generate_launch_description():
 <br>
 
 ## 프로젝트 전역 인자 규칙
-
 | 인자            | 기본값        | 설명 |
 |---------------|--------------|------|
 | `world`       | `empty.sdf`  | 월드 파일명 또는 절대 경로 |
@@ -47,7 +45,6 @@ def generate_launch_description():
 <br>
 
 ## CLI에서 인자 전달
-
 ```bash
 ros2 launch <pkg> <launch_file> world:=my_world.sdf x:=1.0 rviz:=true
 ```
@@ -55,7 +52,6 @@ ros2 launch <pkg> <launch_file> world:=my_world.sdf x:=1.0 rviz:=true
 <br>
 
 ## 팁
-
 - 프로젝트 내 launch 파일들은 인자명을 일관되게 유지한다.
 - `use_sim_time`은 반드시 선언한다 — 누락 시 TF 타이밍 버그가 발생한다.
 - 파일 경로는 절대 경로를 하드코딩하지 말고 `PathJoinSubstitution` + `FindPackageShare`를 사용한다.

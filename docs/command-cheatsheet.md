@@ -1,9 +1,9 @@
 # 자주 쓰는 실행 커맨드 모음 (cheat sheet)
-
 ROS 2 + Gazebo 개발 시 자주 쓰는 커맨드 모음입니다.
 
-## Gazebo
+<br>
 
+## Gazebo
 ```bash
 # 월드와 함께 Gazebo 실행
 gz sim empty.sdf
@@ -37,7 +37,6 @@ gz model -m robot --pose
 <br>
 
 ## ROS 2
-
 ```bash
 # 토픽
 ros2 topic list
@@ -62,7 +61,6 @@ ros2 param set /some_node use_sim_time true
 <br>
 
 ## ros_gz_bridge
-
 ```bash
 # 단일 토픽 브릿지 (간단한 테스트용)
 ros2 run ros_gz_bridge parameter_bridge /clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock
@@ -77,7 +75,6 @@ ros2 run ros_gz_image image_bridge /camera/image
 <br>
 
 ## 모델 스폰
-
 ```bash
 ros2 run ros_gz_sim create \
   -world default \
@@ -89,7 +86,6 @@ ros2 run ros_gz_sim create \
 <br>
 
 ## RViz
-
 ```bash
 ros2 run rviz2 rviz2 -d config/sim.rviz --ros-args -p use_sim_time:=true
 ```
@@ -97,7 +93,6 @@ ros2 run rviz2 rviz2 -d config/sim.rviz --ros-args -p use_sim_time:=true
 <br>
 
 ## 빌드 + 실행 한 번에
-
 ```bash
 colcon build --symlink-install && source install/setup.bash && ros2 launch <pkg> full_sim.launch.py
 ```

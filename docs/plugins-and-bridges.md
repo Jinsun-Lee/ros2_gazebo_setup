@@ -3,7 +3,6 @@
 이 문서는 프로젝트에서 사용하는 플러그인과, 플러그인이 발행하는 토픽을 ROS 2로 어떻게 브릿지하는지 정리합니다.
 
 ## Gazebo 시스템 플러그인 (월드 레벨)
-
 | 플러그인              | 파일명                              | 용도 |
 |---------------------|------------------------------------|------|
 | Physics             | `gz-sim-physics-system`            | 물리 엔진 구동 |
@@ -16,7 +15,6 @@
 <br>
 
 ## 모델 플러그인
-
 | 플러그인                                     | 용도 |
 |-------------------------------------------|------|
 | `gz-sim-diff-drive-system`                | 차동 구동 컨트롤러 |
@@ -27,11 +25,9 @@
 <br>
 
 ## ros_gz_bridge
-
 `ros_gz_bridge`는 Gazebo 토픽과 ROS 2 토픽 간의 메시지를 변환한다.
 
 ### YAML 브릿지 설정
-
 ```yaml
 - ros_topic_name: "cmd_vel"
   gz_topic_name: "/model/robot/cmd_vel"
@@ -53,7 +49,6 @@
 ```
 
 ### 자주 쓰는 토픽 매핑
-
 | Gazebo 토픽 | ROS 2 토픽 | 타입 |
 |---|---|---|
 | `/clock` | `/clock` | `rosgraph_msgs/Clock` |
@@ -66,7 +61,6 @@
 <br>
 
 ## image_bridge
-
 카메라 이미지 토픽은 `ros_gz_bridge` 대신 `ros_gz_image`(`image_bridge`) 사용을 권장한다 — `sensor_msgs/Image`를 더 효율적으로 발행한다.
 
 ```bash
@@ -76,7 +70,6 @@ ros2 run ros_gz_image image_bridge /camera/image
 <br>
 
 ## 디버깅
-
 - Gazebo 토픽 목록: `gz topic -l`
 - Gazebo 토픽 echo: `gz topic -e -t /clock`
 - ROS 2 토픽 목록: `ros2 topic list`

@@ -3,7 +3,6 @@
 대표적인 런치 진입점과 각각의 용도입니다.
 
 ## 1. 빈 월드 (설치 확인용)
-
 Gazebo에 빈 월드를 띄운다. 설치 검증용.
 
 ```bash
@@ -19,7 +18,6 @@ ros2 launch <pkg> empty_world.launch.py
 <br>
 
 ## 2. 커스텀 월드
-
 `worlds/` 아래의 프로젝트 전용 월드를 띄운다.
 
 ```bash
@@ -34,7 +32,6 @@ ros2 launch <pkg> world.launch.py world:=factory.sdf
 <br>
 
 ## 3. 실행 중인 월드에 로봇 스폰
-
 월드를 먼저 띄우고 로봇을 스폰하는 2단계 방식. 로봇 description을 반복 수정할 때 유용.
 
 ```bash
@@ -51,7 +48,6 @@ ros2 run ros_gz_sim create \
 <br>
 
 ## 4. 통합 실행 (월드 + 로봇 + 브릿지 + RViz)
-
 위 과정을 전부 묶은 단일 launch 파일. 일반 개발 시 사용.
 
 ```bash
@@ -68,7 +64,6 @@ ros2 launch <pkg> full_sim.launch.py world:=factory.sdf rviz:=true
 <br>
 
 ## 5. Headless (CI / 배치 시뮬레이션)
-
 ```bash
 ros2 launch <pkg> full_sim.launch.py gui:=false rviz:=false
 ```

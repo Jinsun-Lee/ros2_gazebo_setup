@@ -3,7 +3,6 @@
 Gazebo 월드 파일(`.sdf` 또는 `.world`)은 시뮬레이션 환경을 정의합니다 — 물리 엔진, 조명, 씬, 포함할 모델.
 
 ## 기본 골격
-
 ```xml
 <?xml version="1.0"?>
 <sdf version="1.9">
@@ -51,7 +50,6 @@ Gazebo 월드 파일(`.sdf` 또는 `.world`)은 시뮬레이션 환경을 정의
 <br>
 
 ## 주요 섹션
-
 ### `<physics>`
 - `max_step_size`: 물리 스텝(s). 작을수록 정밀하지만 느리다.
 - `real_time_factor`: 시뮬레이션 시간과 실제 시간의 목표 비율.
@@ -77,6 +75,5 @@ URI로 모델을 로드한다. 모델은 `GZ_SIM_RESOURCE_PATH`로 탐색 가능
 <br>
 
 ## 파일 위치
-
 - 월드는 `worlds/<world_name>.sdf`에 둔다.
 - 초안/실험적 월드는 `draft/worlds/`에 둔다.

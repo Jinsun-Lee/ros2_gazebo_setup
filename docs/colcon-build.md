@@ -1,7 +1,9 @@
 # colcon build 옵션과 워크스페이스 소싱 순서
+설명합니다.
+
+<br>
 
 ## 워크스페이스 구조
-
 ```
 ros2_ws/
 ├── src/
@@ -14,9 +16,7 @@ ros2_ws/
 <br>
 
 ## 빌드
-
 워크스페이스 루트(`ros2_ws/`)에서 실행한다.
-
 ```bash
 # 전체 빌드
 colcon build
@@ -37,9 +37,7 @@ colcon build --parallel-workers 4
 <br>
 
 ## 소싱 순서
-
 가장 일반적인 것부터 가장 구체적인 것 순으로 소싱한다.
-
 ```bash
 # 1. ROS 2 배포판
 source /opt/ros/humble/setup.bash    # 또는 jazzy, rolling
@@ -52,7 +50,6 @@ source ~/ros2_ws/install/setup.bash
 ```
 
 Windows:
-
 ```bash
 call C:\dev\ros2_humble\local_setup.bat
 call C:\Users\...\ros2_ws\install\local_setup.bat
@@ -61,7 +58,6 @@ call C:\Users\...\ros2_ws\install\local_setup.bat
 <br>
 
 ## 유용한 플래그
-
 | 플래그                            | 용도 |
 |---------------------------------|------|
 | `--symlink-install`             | 스크립트 / launch / config를 symlink로 설치. 편집 후 재빌드 불필요. |
@@ -74,7 +70,6 @@ call C:\Users\...\ros2_ws\install\local_setup.bat
 <br>
 
 ## 클린 빌드
-
 ```bash
 rm -rf build install log
 colcon build
@@ -83,7 +78,6 @@ colcon build
 <br>
 
 ## 빌드 이후
-
 패키지 목록이나 setup 스크립트가 바뀌었다면 빌드 후 다시 소싱한다.
 
 ```bash

@@ -1,13 +1,14 @@
 # colcon build 옵션과 워크스페이스 소싱 순서
-설명합니다.
+ROS 2 워크스페이스를 빌드하고 환경을 소싱하는 표준 절차를 정리합니다.
 
 <br>
 
 ## 워크스페이스 구조
+이 저장소는 `src/` 아래에 clone하여 사용한다.
 ```
 ros2_ws/
 ├── src/
-│   └── ros2_gazebo_setup/   # 이 저장소
+│   └── ros2_gazebo_setup/
 ├── build/
 ├── install/
 └── log/
@@ -40,7 +41,7 @@ colcon build --parallel-workers 4
 가장 일반적인 것부터 가장 구체적인 것 순으로 소싱한다.
 ```bash
 # 1. ROS 2 배포판
-source /opt/ros/humble/setup.bash    # 또는 jazzy, rolling
+source /opt/ros/humble/setup.bash
 
 # 2. 오버레이 워크스페이스 (소스로 빌드한 의존성)
 source ~/other_ws/install/setup.bash
@@ -48,8 +49,7 @@ source ~/other_ws/install/setup.bash
 # 3. 현재 워크스페이스
 source ~/ros2_ws/install/setup.bash
 ```
-
-Windows:
+Windows에서는 `.bat` 스크립트를 `call`한다.
 ```bash
 call C:\dev\ros2_humble\local_setup.bat
 call C:\Users\...\ros2_ws\install\local_setup.bat
@@ -58,6 +58,7 @@ call C:\Users\...\ros2_ws\install\local_setup.bat
 <br>
 
 ## 유용한 플래그
+자주 쓰는 colcon 옵션.
 | 플래그                            | 용도 |
 |---------------------------------|------|
 | `--symlink-install`             | 스크립트 / launch / config를 symlink로 설치. 편집 후 재빌드 불필요. |
@@ -70,6 +71,7 @@ call C:\Users\...\ros2_ws\install\local_setup.bat
 <br>
 
 ## 클린 빌드
+캐시가 꼬였을 때 build/install/log을 지우고 처음부터 다시 빌드한다.
 ```bash
 rm -rf build install log
 colcon build
@@ -79,7 +81,6 @@ colcon build
 
 ## 빌드 이후
 패키지 목록이나 setup 스크립트가 바뀌었다면 빌드 후 다시 소싱한다.
-
 ```bash
 source install/setup.bash
 ```

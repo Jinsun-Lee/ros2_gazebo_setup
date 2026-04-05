@@ -1,6 +1,7 @@
 # 트러블슈팅 — Gazebo 실행 시 크래시
-
 **증상:** `gz sim`이 실행 직후 종료되거나, GUI가 검은 화면으로 멈춘다.
+
+<br>
 
 ## 원인과 해결법
 - **GPU 드라이버 문제** — `export LIBGL_ALWAYS_SOFTWARE=1`을 시도한다.

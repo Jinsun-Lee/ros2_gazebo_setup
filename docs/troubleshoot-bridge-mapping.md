@@ -1,6 +1,7 @@
 # 트러블슈팅 — 브릿지 토픽 매핑 실패
-
 **증상:** Gazebo는 발행 중인데 `ros2 topic echo /foo`에 데이터가 오지 않는다.
+
+<br>
 
 ## 원인과 해결법
 - **Gazebo 토픽 이름이 잘못됨** — `gz topic -l`로 확인한다. 일반적으로 `/model/<name>/...` 또는 `/world/<world>/model/<name>/...` 형식이다.

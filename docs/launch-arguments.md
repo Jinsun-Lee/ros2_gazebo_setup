@@ -1,8 +1,10 @@
 # launch 파일 실행 인자와 기본값
-
 launch 파일의 모든 `DeclareLaunchArgument`는 기본값과 의미를 함께 문서화한다.
 
+<br>
+
 ## 인자 선언
+`DeclareLaunchArgument`로 인자를 선언하고 `LaunchConfiguration`으로 참조한다.
 ```python
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
@@ -24,13 +26,13 @@ def generate_launch_description():
     return LaunchDescription([
         world_arg,
         use_sim_time_arg,
-        # ... LaunchConfiguration('world')를 쓰는 노드들
     ])
 ```
 
 <br>
 
 ## 프로젝트 전역 인자 규칙
+모든 launch 파일에서 아래 인자명과 기본값을 일관되게 사용한다.
 | 인자            | 기본값        | 설명 |
 |---------------|--------------|------|
 | `world`       | `empty.sdf`  | 월드 파일명 또는 절대 경로 |
@@ -45,6 +47,7 @@ def generate_launch_description():
 <br>
 
 ## CLI에서 인자 전달
+`<arg>:=<value>` 형식으로 여러 인자를 한 번에 넘길 수 있다.
 ```bash
 ros2 launch <pkg> <launch_file> world:=my_world.sdf x:=1.0 rviz:=true
 ```

@@ -3,7 +3,8 @@
 대표적인 런치 진입점과 각각의 용도입니다.
 
 ## 1. 빈 월드 (설치 확인용)
-Gazebo에 빈 월드를 띄운다. 설치 검증용.
+Gazebo에 빈 월드를 띄운다.  
+설치 검증용.
 
 ```bash
 ros2 launch ros_gz_sim gz_sim.launch.py gz_args:="empty.sdf"
@@ -68,4 +69,5 @@ ros2 launch <pkg> full_sim.launch.py world:=factory.sdf rviz:=true
 ros2 launch <pkg> full_sim.launch.py gui:=false rviz:=false
 ```
 
-내부적으로 `gz sim -s`(서버 전용)를 사용한다. 카메라 센서가 없다면 렌더링 시스템 플러그인 불필요.
+내부적으로 `gz sim -s`(서버 전용)를 사용한다.  
+카메라 센서가 없다면 렌더링 시스템 플러그인 불필요.

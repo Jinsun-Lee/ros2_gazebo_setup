@@ -67,10 +67,12 @@ Gazebo 월드 파일(`.sdf` 또는 `.world`)은 시뮬레이션 환경을 정의
 ambient 색상, 배경, 그림자, 안개, 하늘.
 
 ### `<light>`
-directional(태양), point, spot. 보통 최소 하나의 directional light을 둔다.
+directional(태양), point, spot.  
+보통 최소 하나의 directional light을 둔다.
 
 ### `<include>`
-URI로 모델을 로드한다. 모델은 `GZ_SIM_RESOURCE_PATH`로 탐색 가능해야 한다 — [environment-variables.md](environment-variables.md) 참고.
+URI로 모델을 로드한다.  
+모델은 `GZ_SIM_RESOURCE_PATH`로 탐색 가능해야 한다 — [environment-variables.md](environment-variables.md) 참고.
 
 <br>
 

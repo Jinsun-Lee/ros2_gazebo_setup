@@ -1,6 +1,7 @@
 # Fuel에 모델 업로드하는 방법
 
-Gazebo Fuel(https://app.gazebosim.org)은 공개 모델 저장소입니다. 모델을 업로드하면 URL로 참조해 공유할 수 있습니다.
+Gazebo Fuel(https://app.gazebosim.org)은 공개 모델 저장소입니다.  
+모델을 업로드하면 URL로 참조해 공유할 수 있습니다.
 
 ## 사전 준비
 - https://app.gazebosim.org 계정.
@@ -53,7 +54,8 @@ gz fuel upload -m /path/to/my_model --header "Private-Token: $GZ_FUEL_TOKEN"
 <br>
 
 ## 라이선스 선택지
-Fuel은 라이선스를 요구한다. 일반적인 선택지.
+Fuel은 라이선스를 요구한다.  
+일반적인 선택지.
 - **CC-BY 4.0** — 출처 표시 필수.
 - **CC0** — 퍼블릭 도메인.
 - **Apache 2.0** — 허용적, 코드와 함께 쓸 때 자주 사용.

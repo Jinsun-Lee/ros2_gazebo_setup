@@ -1,8 +1,10 @@
 # 월드 파일 구성 (조명, 물리엔진, 플러그인)
-
 Gazebo 월드 파일(`.sdf` 또는 `.world`)은 시뮬레이션 환경을 정의합니다 — 물리 엔진, 조명, 씬, 포함할 모델.
 
+<br>
+
 ## 기본 골격
+월드 SDF는 `<physics>`, `<plugin>`, `<scene>`, `<light>`, `<include>` 섹션으로 구성된다.
 ```xml
 <?xml version="1.0"?>
 <sdf version="1.9">
@@ -55,6 +57,8 @@ Gazebo 월드 파일(`.sdf` 또는 `.world`)은 시뮬레이션 환경을 정의
 - `real_time_factor`: 시뮬레이션 시간과 실제 시간의 목표 비율.
 - 엔진 선택: DART(기본), Bullet, ODE (엔진 플러그인 통해 지정).
 
+<br>
+
 ### `<plugin>` (월드 레벨)
 기능하는 월드에는 핵심 시스템이 반드시 로드되어야 한다.
 - `Physics` — 물리 엔진 구동.
@@ -63,12 +67,18 @@ Gazebo 월드 파일(`.sdf` 또는 `.world`)은 시뮬레이션 환경을 정의
 - `Sensors` — 데이터를 발행하는 센서가 있을 때 필요.
 - `Contact`, `Imu` — 해당 센서 타입 사용 시 필요.
 
+<br>
+
 ### `<scene>`
 ambient 색상, 배경, 그림자, 안개, 하늘.
+
+<br>
 
 ### `<light>`
 directional(태양), point, spot.  
 보통 최소 하나의 directional light을 둔다.
+
+<br>
 
 ### `<include>`
 URI로 모델을 로드한다.  

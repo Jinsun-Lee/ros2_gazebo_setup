@@ -1,6 +1,7 @@
 # 트러블슈팅 — 메쉬가 안 보임
-
 **증상:** 모델은 스폰되는데 보이지 않거나 와이어프레임으로만 표시된다.
+
+<br>
 
 ## 원인과 해결법
 - **URI가 잘못됨** — SDF에서 `model://<name>/meshes/foo.dae`를 참조하지만 해당 파일이 `GZ_SIM_RESOURCE_PATH`에 없는 경우. `echo $GZ_SIM_RESOURCE_PATH`로 확인한다.
